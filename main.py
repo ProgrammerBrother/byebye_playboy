@@ -20,4 +20,5 @@ def send_message(msg):
 with open('我想说的话', encoding='UTF-8') as f:
     content = f.readlines()
     for x in content:
-        send_message(x.strip())
+        if not x.isspace():
+            send_message(x.strip())
